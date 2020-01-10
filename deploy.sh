@@ -7,6 +7,10 @@ apt-get update -y
 #install usefull packages
 apt-get install sudo vim portsentry fail2ban apache2 mailutils git -y
 
+#config sudoers
+
+rm -rf /etc/sudoers
+cp /root/deploy/src/sudoers /etc/
 #config static ip
 rm -rf /etc/network/interfaces
 cp /root/deploy/src/interfaces /etc/network/interfaces
