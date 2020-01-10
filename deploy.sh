@@ -50,4 +50,10 @@ cp /root/deploy/src/portsentry /etc/default/
 rm -rf /etc/portsentry/portsentry.conf
 cp /root/deploy/src/portsentry.conf /etc/portsentry/
 
+#config crontab
+cp /root/deploy/src/update_script.sh /etc/cron.d/
+cp /root/deploy/src/crontab_checker.sh /etc/cron.d/
+rm -rf /etc/crontab
+cp /root/deploy/src/crontab /etc/
+
 reboot
