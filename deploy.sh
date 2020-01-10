@@ -17,7 +17,7 @@ rm -rf /etc/ssh/sshd_config
 cp /root/deploy/src/sshd_config /etc/ssh/sshd_config
 
 #config apache and web deployment
- openssl   req   -x509   -nodes   -days   365   -newkey   rsa:2048   -keyout   /etc/ssl/private/apache-selfsigned.key   -out /etc/ssl/certs/apache-selfsigned.crt
+ openssl   req   -x509   -nodes   -days   365   -newkey   rsa:2048   -keyout   /etc/ssl/private/apache-selfsigned.key   -out /etc/ssl/certs/apache-selfsigned.crt  -subj "/C=RU/ST=Moscow/L=Moscow/O=21/OU=school/CN=192.168.56.2"
 cp /root/deploy/src/ssl-params.conf /etc/apache2/
 rm -rf /etc/apache2/sites-available/default-ssl.conf
 cp /root/deploy/src/default-ssl.conf /etc/apache2/sites-available/
