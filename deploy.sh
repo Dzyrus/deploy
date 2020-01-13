@@ -56,4 +56,8 @@ cp /root/deploy/src/crontab_checker.sh /etc/cron.d/
 rm -rf /etc/crontab
 cp /root/deploy/src/crontab /etc/
 
+#stop unusefull services
+service console-setup.service stop
+service keyboard-setup.service
+
 reboot
