@@ -57,7 +57,8 @@ rm -rf /etc/crontab
 cp /root/deploy/src/crontab /etc/
 
 #stop unusefull services
-service console-setup.service stop
-service keyboard-setup.service
-
+#service console-setup.service stop
+#service keyboard-setup.service stop
+systemctl disable console-setup.service
+systemctl disable keyboard-setup.service
 reboot
