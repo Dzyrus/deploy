@@ -5,7 +5,7 @@ apt-get update -y
 apt-get update -y
 
 #install usefull packages
-apt-get install sudo vim portsentry fail2ban apache2 mailutils git -y
+apt-get install sudo vim portsentry ufw fail2ban apache2 mailutils -y
 
 #config sudoers
 
